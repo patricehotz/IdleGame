@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 4030741597
+    locked: 0
+  - name: Street and Buildings
+    uniqueID: 2615114969
+    locked: 0
+  - name: Citizen
+    uniqueID: 3181436967
+    locked: 0
