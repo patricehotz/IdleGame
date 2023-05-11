@@ -28,7 +28,6 @@ public class CameraMovement : MonoBehaviour
         {
             Vector3 difference = dragOrigin - camera.ScreenToWorldPoint(Input.mousePosition);
             
-            print("origin " + dragOrigin + " newPosition " + camera.ScreenToWorldPoint(Input.mousePosition) + " = difference " + difference);
 
             //move the camera by that distance, but only in the y axis
             camera.transform.position += new Vector3(0, difference.y, 0);
