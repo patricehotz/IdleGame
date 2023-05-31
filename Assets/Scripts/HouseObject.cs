@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HouseObject : MonoBehaviour
@@ -9,7 +7,7 @@ public class HouseObject : MonoBehaviour
     public bool Bought { get; set; } = false;
 
     //Determites how much the house currently produces
-    public double Production { get; set; }
+    public double Production { get; set; } = 0;
 
     //Determites how much the house will produce after being bought
     public double ProductionStartValue { get; set; }
@@ -17,10 +15,11 @@ public class HouseObject : MonoBehaviour
     //Determites how much more you produce after upgrading
     public double ProductionUpgradeValue { get; set; }
 
-    public void buy()
+    public void Buy()
     {
         if (MoneyController.CanBuy(BuyPrice))
         {
+            MoneyController.CurrentMoney -= BuyPrice;
             Bought = true;
             Production = ProductionStartValue;
         }
